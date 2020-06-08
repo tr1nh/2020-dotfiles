@@ -1,0 +1,6 @@
+set editing-mode vi
+set show-mode-in-prompt off
+set completion-ignore-case on
+set vi-ins-mode-string "[+] "
+set vi-cmd-mode-string "[:] "
+set show-all-if-ambiguous on
