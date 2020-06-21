@@ -60,7 +60,7 @@
     </property>
     <property name="wrap_resistance" type="empty"/>
     <property name="wrap_windows" type="empty"/>
-    <property name="wrap_workspaces" type="bool" value="true"/>
+    <property name="wrap_workspaces" type="bool" value="false"/>
     <property name="borderless_maximize" type="bool" value="false"/>
     <property name="cycle_hidden" type="bool" value="true"/>
     <property name="cycle_minimum" type="bool" value="true"/>

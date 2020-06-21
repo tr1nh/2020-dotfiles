@@ -38,6 +38,10 @@ set directory=~/.vim/backups
 set backup
 set writebackup
 
+" Config netrw:
+let g:netrw_banner=0
+let g:netrw_hide = 1
+
 " Enable mouse control:
 set mouse=a
 
@@ -47,25 +51,38 @@ if has('autocmd')
 endif
 
 " Change default leader key (my little finger too short for press backsplash key):
-let g:mapleader=","
+let g:mapleader=";"
 
 " Shortcuts for replace Esc key:
 nnoremap <Leader><Leader> <Esc>
 inoremap <Leader><Leader> <Esc>
 vnoremap <Leader><Leader> <Esc>
-nnoremap <Leader>1 :!
-nnoremap <Leader>r :r!
+
+" Shortcuts for open command mode (prompt):
+nnoremap <Leader>ee :
+vnoremap <Leader>ee :
+inoremap <Leader>ee <ESC>:
+nnoremap <Leader>er :r!
+inoremap <Leader>er <ESC>:r!
+nnoremap <Leader>e1 :!
+inoremap <Leader>e1 <ESC>:!
 
 " Shortcuts for quickly save and exit:
 nnoremap <Leader>ww :w<CR>
 nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>wf :w!<CR>
 nnoremap <Leader>qq :q<CR>
-nnoremap <Leader>qc :q!<CR>
+nnoremap <Leader>qf :q!<CR>
+nnoremap <Leader>qa :qa<CR>
+nnoremap <Leader>qc :qa!<CR>
 
 " Shortcuts for working with many files:
-nnoremap <Leader>ft :tabnew<CR>
 nnoremap <Leader>fe :Explore<CR>
 nnoremap <Leader>fv :Vexplore<CR>
+nnoremap <Leader>fh :Hexplore<CR>
+nnoremap <Leader>ft :Texplore<CR>
+nnoremap <Leader>fl :Lexplore<CR>
+nnoremap <Leader>fr :Rexplore<CR>
 
 " Shortcuts for working with clipboard:
 vnoremap <Leader>cy "+y<CR>
@@ -73,14 +90,14 @@ vnoremap <Leader>cx "+x<CR>
 nnoremap <Leader>cp "+gp<CR>
 inoremap <Leader>cp <Esc>"+gpa<CR>
 vnoremap <Leader>cp "+gp<CR>
+nnoremap <Leader>cl 0v$h"+y$
+inoremap <Leader>cl <ESC>0v$h"+y$a
 
 " Shortcuts for toggle input Vietnamese with keymap:
 nnoremap <Leader>v0 :set keymap=<CR>
 nnoremap <Leader>vq :set keymap=vietnamese-viqr_utf-8<CR>
 nnoremap <Leader>vt :set keymap=vietnamese-telex_utf-8<CR>
 nnoremap <Leader>vv :set keymap=vietnamese-vni_utf-8<CR>
-nnoremap <Leader>vc 0v$"+y
-inoremap <Leader>vc <Esc>0v$"+y
 
 " Shortcut for UI:
 nnoremap <Leader>ut :colorscheme 
@@ -97,6 +114,7 @@ nnoremap <Leader>uc :set cursorline!<CR>
 nnoremap <Leader>ia :set autoindent!<CR>
 nnoremap <Leader>ie :set expandtab!<CR>
 nnoremap <Leader>ir :retab<CR>
+nnoremap <Leader>i= ggvG=<C-o><C-o>
 
 " Shortcuts for search:
 nnoremap <Leader>sh :set hlsearch!<CR>
@@ -104,3 +122,9 @@ nnoremap <Leader>ss :set smartcase!<CR>
 
 " Shortcuts for toggle mouse controller:
 nnoremap <Leader>m :exec &mouse!="" ? "set mouse=" : "set mouse=a"<CR>
+
+" Shortcuts for tabbed:
+nnoremap <Leader>tt :tabnew<CR>
+nnoremap <Leader>ts :tabs<CR>
+nnoremap <Leader>tm :tabm 
+nnoremap <Leader>to :tabonly<CR>
