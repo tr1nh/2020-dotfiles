@@ -47,7 +47,32 @@ set mouse=a
 
 " Enable jump to last edited line when re-open file:
 if has('autocmd')
-	autocmd BufReadPost * if line("'\"") > 0 && line("'\"") < line("$") | exec "normal! g'\"" | endif
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") < line("$") | exec "normal! g'\"" | endif
+endif
+
+" Config Gvim:
+if has('gui_running')
+  " Set colorscheme:
+  colorscheme default
+  set background=light
+
+  " Hide tool bar:
+  set guioptions-=T
+
+  " Default window size:
+  set columns=75
+  set lines=25
+
+  if has('gui_win32')
+    " Set font:
+    set guifont=consolas:h10
+    set encoding=utf-8
+
+    " Config backup path:
+    set backupdir=~/vimfiles/backups
+    set undodir=~/vimfiles/backups
+    set directory=~/vimfiles/backups
+  endif
 endif
 
 " Change default leader key (my little finger too short for press backsplash key):
@@ -98,6 +123,10 @@ nnoremap <Leader>v0 :set keymap=<CR>
 nnoremap <Leader>vq :set keymap=vietnamese-viqr_utf-8<CR>
 nnoremap <Leader>vt :set keymap=vietnamese-telex_utf-8<CR>
 nnoremap <Leader>vv :set keymap=vietnamese-vni_utf-8<CR>
+inoremap <Leader>v0 <ESC>:set keymap=<CR>a
+inoremap <Leader>vq <ESC>:set keymap=vietnamese-viqr_utf-8<CR>a
+inoremap <Leader>vt <ESC>:set keymap=vietnamese-telex_utf-8<CR>a
+inoremap <Leader>vv <ESC>:set keymap=vietnamese-vni_utf-8<CR>a
 
 " Shortcut for UI:
 nnoremap <Leader>ut :colorscheme 
