@@ -17,6 +17,7 @@ set showcmd
 set showmatch
 set wildmenu
 set wrap
+set cursorline
 
 " Config indent:
 set autoindent
@@ -76,7 +77,7 @@ if has('gui_running')
 endif
 
 " Change default leader key (my little finger too short for press backsplash key):
-let g:mapleader=";"
+let g:mapleader=","
 
 " Shortcuts for replace Esc key:
 nnoremap <Leader><Leader> <Esc>
@@ -100,6 +101,13 @@ nnoremap <Leader>qq :q<CR>
 nnoremap <Leader>qf :q!<CR>
 nnoremap <Leader>qa :qa<CR>
 nnoremap <Leader>qc :qa!<CR>
+inoremap <Leader>ww <ESC>:w<CR>a
+inoremap <Leader>wq <ESC>:wq<CR>
+inoremap <Leader>wf <ESC>:w!<CR>a
+inoremap <Leader>qq <ESC>:q<CR>
+inoremap <Leader>qf <ESC>:q!<CR>
+inoremap <Leader>qa <ESC>:qa<CR>
+inoremap <Leader>qc <ESC>:qa!<CR>
 
 " Shortcuts for working with many files:
 nnoremap <Leader>fe :Explore<CR>
