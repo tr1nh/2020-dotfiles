@@ -17,7 +17,7 @@ set showcmd
 set showmatch
 set wildmenu
 set wrap
-set cursorline
+set nocursorline
 
 " Config indent:
 set autoindent

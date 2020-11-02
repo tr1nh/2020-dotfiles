@@ -135,5 +135,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# add timestamp for bash history:
+export HISTTIMEFORMAT='%Y%m%d%H%M%S  '
+
 # alias for quickly access my favorite command:
 alias h='history | grep'
+alias now='date +"%Y%m%d%H%M%S"'
+
+# bash-bookmark commands:
+source ~/bookmark.sh
+
