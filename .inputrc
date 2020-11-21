@@ -1,6 +1,13 @@
+# use vi keybind style
 set editing-mode vi
+
+# show vi mode status
 set show-mode-in-prompt off
-set completion-ignore-case on
 set vi-ins-mode-string "[+] "
 set vi-cmd-mode-string "[:] "
-set show-all-if-ambiguous on
+
+# ignorecase for completion
+set completion-ignore-case on
+
+# hit one tab for show all suggestion
+set show-all-if-ambiguous off

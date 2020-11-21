@@ -4,8 +4,8 @@ syntax enable
 set t_Co=256
 
 " Choose colorscheme:
-colorscheme elflord
-set background=dark
+" colorscheme elflord
+" set background=dark
 
 " Config UI:
 set laststatus=0
@@ -25,6 +25,8 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
+let g:html_indent_style1 = "inc"
+let g:html_indent_script1 = "inc"
 
 " Config search:
 set ignorecase
@@ -33,11 +35,11 @@ set nohlsearch
 set smartcase
 
 " Config backup:
-set backupdir=~/.vim/backups
-set undodir=~/.vim/backups
-set directory=~/.vim/backups
-set backup
-set writebackup
+" set backupdir=~/.vim/backups
+" set undodir=~/.vim/backups
+" set directory=~/.vim/backups
+" set backup
+" set writebackup
 
 " Config netrw:
 let g:netrw_banner=0
@@ -70,9 +72,9 @@ if has('gui_running')
     set encoding=utf-8
 
     " Config backup path:
-    set backupdir=~/vimfiles/backups
-    set undodir=~/vimfiles/backups
-    set directory=~/vimfiles/backups
+    " set backupdir=~/vimfiles/backups
+    " set undodir=~/vimfiles/backups
+    " set directory=~/vimfiles/backups
   endif
 endif
 

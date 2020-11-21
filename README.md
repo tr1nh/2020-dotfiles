@@ -2,6 +2,8 @@
 
 A backup of my simple dotfiles.
 
+**This dotfiles is deprecated, I'm planning to make new one.**
+
 ## About
 
 This dotfiles include:
